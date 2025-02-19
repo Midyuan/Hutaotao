@@ -1,0 +1,19 @@
+{
+  "name": "hutao-bot",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^13.1.7",
+    "electron-builder": "^22.11.7"
+  },
+  "build": {
+    "appId": "com.example.hutao-bot",
+    "win": {
+      "target": "nsis"
+    }
+  }
+}

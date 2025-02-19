@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Theme Web</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('keydown', event => {
+            if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I') || (event.ctrlKey && event.shiftKey && event.key === 'J') || (event.ctrlKey && event.key === 'U')) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</head>
+<body>
+    <button id="yes">Love Hu Tao</button>
+    <button id="no">Hate Hu Tao</button>
+    <img id="gif" src="https://media.tenor.com/zWwNFvLE-2IAAAAj/hu-tao.gif" alt="Hu Tao GIF">
+    <script>
+        const noButton = document.getElementById('no');
+        const yesButton = document.getElementById('yes');
+        let yesButtonSize = 20;
+
+        noButton.addEventListener('click', () => {
+            yesButtonSize += 150; // Increase font size significantly more
+            yesButton.style.fontSize = yesButtonSize + 'px';
+            if (yesButtonSize >= window.innerWidth) {
+                yesButton.style.position = 'absolute';
+                yesButton.style.top = '50%';
+                yesButton.style.left = '50%';
+                yesButton.style.transform = 'translate(-50%, -50%)';
+                yesButton.style.width = '100%';
+                yesButton.style.height = '100%';
+                yesButton.style.fontSize = 'calc(100vw / 3)'; // Ensure font size fits within the viewport
+                yesButton.style.zIndex = '1000';
+                noButton.style.display = 'none';
+            }
+        });
+
+        yesButton.addEventListener('click', () => {
+            window.location.href = 'success.html'; // Redirect to new page
+        });
+    </script>
+</body>
+</html>

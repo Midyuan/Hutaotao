@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <style>
+        body {
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            width: 35%; 
+            height: auto; 
+        }
+        p {
+            margin-top: 20px;
+            font-size: 48px; 
+            color: #333;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', () => {
+            if (performance.navigation.type === 1) {
+                window.location.href = 'index.html'; h
+            }
+        });
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('keydown', event => {
+            if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I') || (event.ctrlKey && event.shiftKey && event.key === 'J') || (event.ctrlKey && event.key === 'U')) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</head>
+<body>
+    <img src="https://media1.tenor.com/m/_guMVQ5ezy0AAAAd/hu-tao-genshin.gif" alt="Hu Tao GIF">
+    <p>Yes I know I Love You Too</p>
+</body>
+</html>
